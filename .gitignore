@@ -1,0 +1,26 @@
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+
+# Editor and system files
+.vscode/
+.DS_Store
+*~
+*.swp
+*.swo

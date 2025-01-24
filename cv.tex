@@ -1,0 +1,116 @@
+% Professional CV Template
+\documentclass[11pt,a4paper]{article}
+
+% Required packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Custom colors
+\definecolor{primary}{RGB}{70,130,180}
+\definecolor{secondary}{RGB}{128,128,128}
+
+% Page geometry
+\geometry{
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
+% Custom section style
+\titleformat{\section}
+    {\Large\bfseries\color{primary}}
+    {}{0em}
+    {}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+% Custom commands for contact info
+\newcommand{\contactItem}[2]{
+    {\color{secondary}\small#1} & #2 \\
+}
+
+% Document begins
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\textbf{PAUL SPENCER}}\\[0.5em]
+    {\color{secondary}\large Software Engineer}\\[1em]
+\end{center}
+
+% Contact Information
+\begin{tabular}{ll}
+    \contactItem{\faPhone}{06 46 395 141}
+    \contactItem{\faEnvelope}{spencerpj@gmail.com}
+    \contactItem{\faMapMarker}{Amsterdam, The Netherlands}
+    \contactItem{\faFlag}{British}
+\end{tabular}
+
+\section{Summary}
+A software engineer with a passion for programming with two decades of history of producing solutions in the financial, energy and software industries.
+
+\section{Experience}
+\textbf{Baker Hughes} \hfill \textit{Delft, The Netherlands}\\
+\textit{Senior Developer - Contractor} \hfill \textit{Aug 2019 -- Present}\\
+\textit{Platform Evangelist} \hfill \textit{Aug 2015 -- Aug 2019}\\
+\textit{Senior Developer} \hfill \textit{Jan 2013 -- Aug 2015}
+\begin{itemize}[leftmargin=*]
+    \item My Scrum team implemented an SDK and API for the JewelSuite Subsurface Modeling and JewelEarth Platform
+    \item Developed and delivered training to 150+ developers and ecosystem partners worldwide
+    \item Presented development tools at conferences and helped onboard partners
+    \item Designed platform support procedures and set up the support department
+    \item Contributed to quality committees, ran coding dojos and mentored new developers
+    \item Quality coach and embedded team member of an offshore (Indian) team
+\end{itemize}
+
+\textbf{Kempen \& Co} \hfill \textit{Amsterdam, The Netherlands}\\
+\textit{Senior Developer} \hfill \textit{Dec 2009 -- Dec 2013}\\
+\textit{Developer} \hfill \textit{May 2007 -- Dec 2009}
+\begin{itemize}[leftmargin=*]
+    \item Improved company's software development technology portfolio and processes, helping move toward Agile techniques
+    \item Delivered training on Entity Framework, Linq and Unit Testing/TDD to the team
+    \item Maintained and enhanced property securities indexing engine, facilitating doubled subscription base with halved man-hour cost
+    \item Developed application for maintaining and trading complex structured products, enabling trading of instruments worth hundreds of millions of Euros monthly
+    \item Authored several K2 Workflow systems, reducing errors and increasing throughput of business-critical processes
+\end{itemize}
+
+\textbf{Unisys} \hfill \textit{Amsterdam, The Netherlands}\\
+\textit{Report Developer / Accounts Receivable} \hfill \textit{May 2001 -- May 2007}
+\begin{itemize}[leftmargin=*]
+    \item Responsible for reporting Accounts Receivables activity worldwide using WebIntelligence, Access, Excel, and VBA
+    \item Increased monthly output of reports eightfold while halving man-hours
+    \item Go-to person for fast turnaround ad hoc and recurring reports used for board-level decision making
+    \item Promoted three months after starting the role
+\end{itemize}
+
+\section{Education}
+\textbf{Universiteit van Amsterdam} \hfill \textit{Amsterdam, The Netherlands}\\
+\textit{Masters Software Engineering} \hfill \textit{2018 -- 2020}\\
+\textit{(Awaiting completion of Masters Project)}
+
+\textbf{Wolverhampton University and Hogeschool Holland}\\
+\textit{BA Hons (2:1) and HEAO in European Business Administration} \hfill \textit{1992 -- 1996}
+
+\section{Certifications}
+\begin{itemize}[leftmargin=*]
+    \item Microsoft Certified Solution Developer: Microsoft .NET (1.1) (MCSD)
+    \item Microsoft Certified Professional Developer: Web Developer (MCPD)
+    \item MCPD: Windows Developer
+    \item MCPD: Windows Azure Developer Charter Member
+    \item MCPD: Web Developer 4
+    \item Nederlands Als Een Tweede Taal (NT2) Niveau 2 (July 2010)
+\end{itemize}
+
+\section{Languages}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{English:} Mother Tongue
+    \item \textbf{Dutch:} Fluent spoken, listening and reading, intermediate written
+\end{itemize}
+
+\end{document}
