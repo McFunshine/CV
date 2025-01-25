@@ -53,6 +53,9 @@
 \widowpenalty=10000  % Prevent widow lines
 \clubpenalty=10000   % Prevent club lines
 
+% After the packages section, add:
+\input{cv_texts.tex}
+
 % Document begins
 \begin{document}
 
@@ -64,8 +67,11 @@
 
 % Contact Information
 \begin{tabular}{ll}
-    \contactItem{\faPhone}{06 46 395 141}
+    \contactItem{\faPhone}{+31 6 46 395 141}
     \contactItem{\faEnvelope}{spencerpj@gmail.com}
+    \contactItem{\faLinkedin}{linkedin.com/in/spencerpj}
+    \contactItem{\faGlobe}{spencerpj.com}
+    \contactItem{\faGithub}{github.com/McFunshine}
     \contactItem{\faMapMarker}{Amsterdam, The Netherlands}
     \contactItem{\faFlag}{British and Irish}
 \end{tabular}
@@ -80,23 +86,23 @@ A software engineer with a passion for programming with nearly three decades of 
 \textit{Head of Innovation} \hfill \textit{Feb 2020 -- Jan 2024}\\[2pt]
 \textit{Software Engineer} \hfill \textit{Apr 2019 -- Aug 2019}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Built and deployed production-ready chatbots using Python, C\#, Azure, and OpenAI
-    \item Handled complete development lifecycle from architecture to implementation
-    \item Independently developed full-featured iOS and Android application using Kotlin Multiplatform with OpenAI integration
-    \item Spearheaded development of custom Android application and OCR integration solutions
-    \item Created domain-specific language extension for Decision Engine using JetBrains MPS
-    \item Maintained development responsibilities within core Java product team
-    \item Updated software to comply with new laws using property-based testing
-    \item Implemented solutions using Java and Haskell
+    \item \KhonraadChatbots
+    \item \KhonraadLifecycle
+    \item \KhonraadMobile
+    \item \KhonraadAndroid
+    \item \KhonraadMPS
+    \item \KhonraadJava
+    \item \KhonraadLaws
+    \item \KhonraadHaskell
 \end{itemize}
 
 \item \textbf{Captain McFunshines Software Engineering} \hfill \textit{Soest, The Netherlands}\\[2pt]
 \textit{Freelance Software Engineer} \hfill \textit{Aug 2019 -- Present}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Designed and developed Podmorph, an AI-powered solution for podcast and radio professionals
-    \item Integrated multiple AI services (Anthropic, Google AI, OpenAI, Groq, Replit, Fal AI) using Kotlin Multiplatform
-    \item Built cloud infrastructure spanning AWS and Microsoft Azure
-    \item Completed six-month consultancy engagement with Baker Hughes
+    \item \McfunshinePodmorph
+    \item \McfunshinePodmorphAI
+    \item \McfunshinePodmorphCloud
+    \item \McfunshinePodmorphBaker
 \end{itemize}
 
 \item \textbf{Baker Hughes} \hfill \textit{Delft, The Netherlands}\\[2pt]
@@ -104,53 +110,53 @@ A software engineer with a passion for programming with nearly three decades of 
 \textit{JewelEarth Platform Evangelist} \hfill \textit{Oct 2015 -- Apr 2019}\\[2pt]
 \textit{Senior .Net Developer} \hfill \textit{Jan 2014 -- Oct 2015}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Helped developers extend and integrate the JewelSuite ecosystem
-    \item Developed and delivered training to ecosystem partners worldwide
-    \item Presented development tools at conferences and helped onboard partners
-    \item Designed platform support procedures and set up support department
+    \item \BakerEcosystem
+    \item \BakerTraining
+    \item \BakerConferences
+    \item \BakerSupport
 \end{itemize}
 
 \item \textbf{Kempen \& Co} \hfill \textit{Amsterdam, The Netherlands}\\[2pt]
 \textit{Senior Developer} \hfill \textit{Dec 2009 -- Dec 2013}\\[2pt]
 \textit{Developer} \hfill \textit{May 2007 -- Dec 2009}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Improved company's software development technology portfolio and processes, helping move toward Agile techniques
-    \item Delivered training on Entity Framework, Linq and Unit Testing/TDD to the team
-    \item Maintained and enhanced property securities indexing engine, facilitating doubled subscription base with halved man-hour cost
-    \item Developed application for maintaining and trading complex structured products, enabling trading of instruments worth hundreds of millions of Euros monthly
-    \item Authored several K2 Workflow systems, reducing errors and increasing throughput of business-critical processes
+    \item \KempenAgile
+    \item \KempenTraining
+    \item \KempenIndexing
+    \item \KempenTrading
+    \item \KempenWorkflow
 \end{itemize}
 
 \item \textbf{Unisys} \hfill \textit{Amsterdam, The Netherlands}\\[2pt]
 \textit{Report Developer / Accounts Receivable} \hfill \textit{May 2001 -- May 2007}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Responsible for reporting Accounts Receivables activity worldwide using WebIntelligence, Access, Excel, and VBA
-    \item Increased monthly output of reports eightfold while halving man-hours
-    \item Go-to person for fast turnaround ad hoc and recurring reports used for board-level decision making
-    \item Promoted three months after starting the role
+    \item \UnisysReporting
+    \item \UnisysEfficiency
+    \item \UnisysDecisions
+    \item \UnisysPromotion
 \end{itemize}
 
 \item \textbf{ACT Financial Systems} \hfill \textit{London, UK}\\[2pt]
 \textit{Support Analyst / Developer} \hfill \textit{Nov 1999 -- Apr 2001}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Supported and developed FISCAL, a bespoke multi-currency, multi-market settlement system for stockbrokers
-    \item Used Universe Databasic (PICK) to solve business, procedural, functional and technical problems
-    \item Successfully investigated and remedied software bugs and data corruption within SLA time limits
-    \item Improved company image with all customers
+    \item \ACTFiscal
+    \item \ACTSolutions
+    \item \ACTSLA
+    \item \ACTCustomers
 \end{itemize}
 
 \item \textbf{HSBC Investment Bank} \hfill \textit{London, UK}\\[2pt]
 \textit{Junior Programmer} \hfill \textit{Feb 1999 -- Nov 1999}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Developed message processing, report writing, and screen handling programs
+    \item \HSBCProgramming
 \end{itemize}
 
 \item \textbf{Lloyds Bank Stockbrokers} \hfill \textit{London, UK}\\[2pt]
 \textit{Support / Business Analyst} \hfill \textit{May 1997 -- Feb 1999}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Implemented, tested and supported various third-party and in-house projects
-    \item Successfully met regulatory deadlines while reducing overall costs
-    \item Developed reports on the Fiscal Settlement System
+    \item \LloydsProjects
+    \item \LloydsDeadlines
+    \item \LloydsFiscal
 \end{itemize}
 
 \section{Education}
@@ -165,14 +171,14 @@ A software engineer with a passion for programming with nearly three decades of 
 
 \section{Certifications}
 \begin{itemize}[leftmargin=*]
-\item 15 Microsoft Certifications including 5 MCPDs in Windows, Web and Azure (all expired)
-\item Nederlands Als Een Tweede Taal (NT2) Niveau 2
+\item \CertMicrosoft
+\item \CertDutch
 \end{itemize}
 
 \section{Languages}
 \begin{itemize}[leftmargin=*]
-\item \textbf{English:} Mother Tongue
-\item \textbf{Dutch:} Fluent spoken, listening and reading, intermediate written
+\item \textbf{English:} \LangEnglish
+\item \textbf{Dutch:} \LangDutch
 \end{itemize}
 
 \end{itemize}
