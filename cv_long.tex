@@ -10,6 +10,9 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage[english]{datetime2}
+\usepackage{ragged2e}
+
 
 % Custom colors
 \definecolor{primary}{RGB}{70,130,180}
@@ -56,35 +59,42 @@
 % After the packages section, add:
 \input{cv_texts.tex}
 
+% Add this command definition before \begin{document}
+\newcommand{\companyheader}[2]{%
+  \noindent\begin{minipage}{\textwidth}%
+    \textbf{#1}\hfill\textit{#2}%
+  \end{minipage}\\[2pt]%
+}
+
 % Document begins
 \begin{document}
 
 % Header
 \begin{center}
-    {\Huge\textbf{PAUL SPENCER}}\\[0.5em]
+    {\Huge\textbf{\MakeUppercase{\ProfileName}}}\\[0.5em]
     {\color{secondary}\large Software Engineer}\\[1em]
 \end{center}
 
 % Contact Information
 \begin{tabular}{ll}
-    \contactItem{\faPhone}{+31 6 46 395 141}
-    \contactItem{\faEnvelope}{spencerpj@gmail.com}
-    \contactItem{\faLinkedin}{linkedin.com/in/spencerpj}
-    \contactItem{\faGlobe}{spencerpj.com}
-    \contactItem{\faGithub}{github.com/McFunshine}
-    \contactItem{\faMapMarker}{Amsterdam, The Netherlands}
-    \contactItem{\faFlag}{British and Irish}
+    \contactItem{\faPhone}{\ProfilePhone}
+    \contactItem{\faEnvelope}{\ProfileEmail}
+    \contactItem{\faLinkedin}{\ProfileLinkedIn}
+    \contactItem{\faGlobe}{\ProfileWebsite}
+    \contactItem{\faGithub}{\ProfileGithub}
+    \contactItem{\faMapMarker}{\ProfileLocation}
+    \contactItem{\faFlag}{\ProfileCitizenship}
 \end{tabular}
 
 \section{Summary}
-A software engineer with a passion for programming with nearly three decades of history of producing solutions in the financial, energy and GovTech.
+\ProfileGeneral
 
 \section{Experience}
 \begin{itemize}[leftmargin=0pt,label={},itemsep=2em]  % Increased spacing between items
-\item \textbf{Khonraad Software Engineering} \hfill \textit{Amersfoort, The Netherlands}\\[2pt]
-\textit{Lead AI and Emerging Technologies Architect} \hfill \textit{Jan 2024 -- Present}\\[2pt]
-\textit{Head of Innovation} \hfill \textit{Feb 2020 -- Jan 2024}\\[2pt]
-\textit{Software Engineer} \hfill \textit{Apr 2019 -- Aug 2019}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\KhonraadName} \hfill \textit{\KhonraadLocation}}\\[2pt]
+\textit{\KhonraadThirdJobTitle} \hfill \textit{\KhonraadThirdJobStart\,--\,\KhonraadThirdJobEnd}\\[2pt]
+\textit{\KhonraadSecondJobTitle} \hfill \textit{\KhonraadSecondJobStart\,--\,\KhonraadSecondJobEnd}\\[2pt]
+\textit{\KhonraadFirstJobTitle} \hfill \textit{\KhonraadFirstJobStart\,--\,\KhonraadFirstJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \KhonraadChatbots
     \item \KhonraadLifecycle
@@ -94,10 +104,10 @@ A software engineer with a passion for programming with nearly three decades of 
     \item \KhonraadJava
     \item \KhonraadLaws
     \item \KhonraadHaskell
-\end{itemize}
+\end{itemize} 
 
-\item \textbf{Captain McFunshines Software Engineering} \hfill \textit{Soest, The Netherlands}\\[2pt]
-\textit{Freelance Software Engineer} \hfill \textit{Aug 2019 -- Present}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\McfunshineName} \hfill \textit{\McfunshineLocation}}\\[2pt]
+\textit{\McfunshineJobTitle} \hfill \textit{\McfunshineJobStart\,--\,\McfunshineJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \McfunshinePodmorph
     \item \McfunshinePodmorphAI
@@ -105,10 +115,10 @@ A software engineer with a passion for programming with nearly three decades of 
     \item \McfunshinePodmorphBaker
 \end{itemize}
 
-\item \textbf{Baker Hughes} \hfill \textit{Delft, The Netherlands}\\[2pt]
-\textit{Freelance Software Engineer} \hfill \textit{Aug 2019 -- Dec 2019}\\[2pt]
-\textit{JewelEarth Platform Evangelist} \hfill \textit{Oct 2015 -- Apr 2019}\\[2pt]
-\textit{Senior .Net Developer} \hfill \textit{Jan 2014 -- Oct 2015}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\BakerName} \hfill \textit{\BakerLocation}}\\[2pt]
+\textit{\BakerThirdJobTitle} \hfill \textit{\BakerThirdJobStart\,--\,\BakerThirdJobEnd}\\[2pt]
+\textit{\BakerSecondJobTitle} \hfill \textit{\BakerSecondJobStart\,--\,\BakerSecondJobEnd}\\[2pt]
+\textit{\BakerFirstJobTitle} \hfill \textit{\BakerFirstJobStart\,--\,\BakerFirstJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \BakerEcosystem
     \item \BakerTraining
@@ -116,9 +126,9 @@ A software engineer with a passion for programming with nearly three decades of 
     \item \BakerSupport
 \end{itemize}
 
-\item \textbf{Kempen \& Co} \hfill \textit{Amsterdam, The Netherlands}\\[2pt]
-\textit{Senior Developer} \hfill \textit{Dec 2009 -- Dec 2013}\\[2pt]
-\textit{Developer} \hfill \textit{May 2007 -- Dec 2009}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\KempenName} \hfill \textit{\KempenLocation}}\\[2pt]
+\textit{\KempenSecondJobTitle} \hfill \textit{\KempenSecondJobStart\,--\,\KempenSecondJobEnd}\\[2pt]
+\textit{\KempenFirstJobTitle} \hfill \textit{\KempenFirstJobStart\,--\,\KempenFirstJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \KempenAgile
     \item \KempenTraining
@@ -127,8 +137,8 @@ A software engineer with a passion for programming with nearly three decades of 
     \item \KempenWorkflow
 \end{itemize}
 
-\item \textbf{Unisys} \hfill \textit{Amsterdam, The Netherlands}\\[2pt]
-\textit{Report Developer / Accounts Receivable} \hfill \textit{May 2001 -- May 2007}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\UnisysName} \hfill \textit{\UnisysLocation}}\\[2pt]
+\textit{\UnisysJobTitle} \hfill \textit{\UnisysJobStart\,--\,\UnisysJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \UnisysReporting
     \item \UnisysEfficiency
@@ -136,8 +146,8 @@ A software engineer with a passion for programming with nearly three decades of 
     \item \UnisysPromotion
 \end{itemize}
 
-\item \textbf{ACT Financial Systems} \hfill \textit{London, UK}\\[2pt]
-\textit{Support Analyst / Developer} \hfill \textit{Nov 1999 -- Apr 2001}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\ACTName} \hfill \textit{\ACTLocation}}\\[2pt]
+\textit{\ACTJobTitle} \hfill \textit{\ACTJobStart\,--\,\ACTJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \ACTFiscal
     \item \ACTSolutions
@@ -145,14 +155,14 @@ A software engineer with a passion for programming with nearly three decades of 
     \item \ACTCustomers
 \end{itemize}
 
-\item \textbf{HSBC Investment Bank} \hfill \textit{London, UK}\\[2pt]
-\textit{Junior Programmer} \hfill \textit{Feb 1999 -- Nov 1999}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\HSBCName} \hfill \textit{\HSBCLocation}}\\[2pt]
+\textit{\HSBCJobTitle} \hfill \textit{\HSBCJobStart\,--\,\HSBCJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item \HSBCProgramming
+    \item \HSBCShort
 \end{itemize}
 
-\item \textbf{Lloyds Bank Stockbrokers} \hfill \textit{London, UK}\\[2pt]
-\textit{Support / Business Analyst} \hfill \textit{May 1997 -- Feb 1999}\\[1pt]
+\item \parbox{\textwidth}{\textbf{\LloydsName} \hfill \textit{\LloydsLocation}}\\[2pt]
+\textit{\LloydsJobTitle} \hfill \textit{\LloydsJobStart\,--\,\LloydsJobEnd}\\[1pt]
 \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
     \item \LloydsProjects
     \item \LloydsDeadlines
@@ -161,7 +171,7 @@ A software engineer with a passion for programming with nearly three decades of 
 
 \section{Education}
 \begin{itemize}[leftmargin=0pt,label={},itemsep=2em]
-\item \textbf{Universiteit van Amsterdam} \hfill \textit{Amsterdam, The Netherlands}\\
+\item \parbox{\textwidth}{\textbf{Universiteit van Amsterdam} \hfill \textit{Amsterdam, The Netherlands}}\\
 \textit{Masters Software Engineering} \hfill \textit{Graduated 2022}\\
 \textit{(Completed while maintaining full-time employment)}
 
