@@ -12,6 +12,7 @@
 \usepackage{xcolor}
 \usepackage[english]{datetime2}
 \usepackage{ragged2e}
+\usepackage{needspace}
 
 
 % Custom colors
@@ -76,108 +77,145 @@
 \end{center}
 
 % Contact Information
-\begin{tabular}{ll}
-    \contactItem{\faPhone}{\ProfilePhone}
-    \contactItem{\faEnvelope}{\ProfileEmail}
-    \contactItem{\faLinkedin}{\ProfileLinkedIn}
-    \contactItem{\faGlobe}{\ProfileWebsite}
-    \contactItem{\faGithub}{\ProfileGithub}
-    \contactItem{\faMapMarker}{\ProfileLocation}
-    \contactItem{\faFlag}{\ProfileCitizenship}
+\begin{tabular}{ll@{\hspace{0.2\textwidth}}ll}
+    \faPhone & \ProfilePhone & \faLinkedin & \href{https://www.\ProfileLinkedIn}{\texttt{\ProfileLinkedIn}} \\
+    \faEnvelope & \href{mailto:\ProfileEmail}{\texttt{\ProfileEmail}} & \faGlobe & \href{https://\ProfileWebsite}{\texttt{\ProfileWebsite}} \\
+    \faMapMarker & \ProfileLocation & \faGithub & \href{https://\ProfileGithub}{\texttt{\ProfileGithub}} \\
+    \faFlag & \ProfileCitizenship & & \\
 \end{tabular}
 
 \section{Summary}
 \ProfileGeneral
 
 \section{Experience}
-\begin{itemize}[leftmargin=0pt,label={},itemsep=2em]  % Increased spacing between items
-\item \parbox{\textwidth}{\textbf{\KhonraadName} \hfill \textit{\KhonraadLocation}}\\[2pt]
-\textit{\KhonraadThirdJobTitle} \hfill \textit{\KhonraadThirdJobStart\,--\,\KhonraadThirdJobEnd}\\[2pt]
-\textit{\KhonraadSecondJobTitle} \hfill \textit{\KhonraadSecondJobStart\,--\,\KhonraadSecondJobEnd}\\[2pt]
-\textit{\KhonraadFirstJobTitle} \hfill \textit{\KhonraadFirstJobStart\,--\,\KhonraadFirstJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item \KhonraadChatbots
-    \item \KhonraadLifecycle
-    \item \KhonraadMobile
-    \item \KhonraadAndroid
-    \item \KhonraadMPS
+\begin{itemize}[leftmargin=0pt,label={},itemsep=2em,topsep=0pt]
+\item \parbox{\textwidth}{\textbf{\KhonraadName} \hfill \textit{\KhonraadLocation}}\\
+\textit{\KhonraadThirdJobTitle} \hfill \textit{\KhonraadThirdJobStart\,--\,\KhonraadThirdJobEnd}\\
+\textit{\KhonraadSecondJobTitle} \hfill \textit{\KhonraadSecondJobStart\,--\,\KhonraadSecondJobEnd}\\
+\textit{\KhonraadFirstJobTitle} \hfill \textit{\KhonraadFirstJobStart\,--\,\KhonraadFirstJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \KhonraadTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \KhonraadJava
-    \item \KhonraadLaws
-    \item \KhonraadHaskell
+    \item \KhonraadInnovation
+    \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt,itemsep=0pt,label={--}]
+        \item \KhonraadChatbots
+        \item \KhonraadMobile
+        \item \KhonraadAndroid
+        \item \KhonraadMPS
+    \end{itemize}
 \end{itemize} 
 
-\item \parbox{\textwidth}{\textbf{\McfunshineName} \hfill \textit{\McfunshineLocation}}\\[2pt]
-\textit{\McfunshineJobTitle} \hfill \textit{\McfunshineJobStart\,--\,\McfunshineJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \parbox{\textwidth}{\textbf{\McfunshineName} \hfill \textit{\McfunshineLocation}}\\
+\textit{\McfunshineJobTitle} \hfill \textit{\McfunshineJobStart\,--\,\McfunshineJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \McfunshinePodmorphTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \McfunshinePodmorph
     \item \McfunshinePodmorphAI
-    \item \McfunshinePodmorphCloud
     \item \McfunshinePodmorphBaker
 \end{itemize}
 
-\item \parbox{\textwidth}{\textbf{\BakerName} \hfill \textit{\BakerLocation}}\\[2pt]
-\textit{\BakerThirdJobTitle} \hfill \textit{\BakerThirdJobStart\,--\,\BakerThirdJobEnd}\\[2pt]
-\textit{\BakerSecondJobTitle} \hfill \textit{\BakerSecondJobStart\,--\,\BakerSecondJobEnd}\\[2pt]
-\textit{\BakerFirstJobTitle} \hfill \textit{\BakerFirstJobStart\,--\,\BakerFirstJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \parbox{\textwidth}{\textbf{\BakerName} \hfill \textit{\BakerLocation}}\\
+\textit{\BakerThirdJobTitle} \hfill \textit{\BakerThirdJobStart\,--\,\BakerThirdJobEnd}\\
+\textit{\BakerSecondJobTitle} \hfill \textit{\BakerSecondJobStart\,--\,\BakerSecondJobEnd}\\
+\textit{\BakerFirstJobTitle} \hfill \textit{\BakerFirstJobStart\,--\,\BakerFirstJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \BakerTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \BakerEcosystem
     \item \BakerTraining
     \item \BakerConferences
     \item \BakerSupport
+    \item \BakerSDK
 \end{itemize}
 
-\item \parbox{\textwidth}{\textbf{\KempenName} \hfill \textit{\KempenLocation}}\\[2pt]
-\textit{\KempenSecondJobTitle} \hfill \textit{\KempenSecondJobStart\,--\,\KempenSecondJobEnd}\\[2pt]
-\textit{\KempenFirstJobTitle} \hfill \textit{\KempenFirstJobStart\,--\,\KempenFirstJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item \KempenAgile
+\item \parbox{\textwidth}{\textbf{\KempenName} \hfill \textit{\KempenLocation}}\\
+\textit{\KempenSecondJobTitle} \hfill \textit{\KempenSecondJobStart\,--\,\KempenSecondJobEnd}\\
+\textit{\KempenFirstJobTitle} \hfill \textit{\KempenFirstJobStart\,--\,\KempenFirstJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \KempenTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \KempenTraining
     \item \KempenIndexing
     \item \KempenTrading
     \item \KempenWorkflow
 \end{itemize}
 
-\item \parbox{\textwidth}{\textbf{\UnisysName} \hfill \textit{\UnisysLocation}}\\[2pt]
-\textit{\UnisysJobTitle} \hfill \textit{\UnisysJobStart\,--\,\UnisysJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \parbox{\textwidth}{\textbf{\UnisysName} \hfill \textit{\UnisysLocation}}\\
+\textit{\UnisysJobTitle} \hfill \textit{\UnisysJobStart\,--\,\UnisysJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \UnisysTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \UnisysReporting
-    \item \UnisysEfficiency
     \item \UnisysDecisions
-    \item \UnisysPromotion
 \end{itemize}
 
-\item \parbox{\textwidth}{\textbf{\ACTName} \hfill \textit{\ACTLocation}}\\[2pt]
-\textit{\ACTJobTitle} \hfill \textit{\ACTJobStart\,--\,\ACTJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \parbox{\textwidth}{\textbf{\ACTName} \hfill \textit{\ACTLocation}}\\
+\textit{\ACTJobTitle} \hfill \textit{\ACTJobStart\,--\,\ACTJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \ACTTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \ACTFiscal
     \item \ACTSolutions
     \item \ACTSLA
-    \item \ACTCustomers
 \end{itemize}
 
-\item \parbox{\textwidth}{\textbf{\HSBCName} \hfill \textit{\HSBCLocation}}\\[2pt]
-\textit{\HSBCJobTitle} \hfill \textit{\HSBCJobStart\,--\,\HSBCJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \parbox{\textwidth}{\textbf{\HSBCName} \hfill \textit{\HSBCLocation}}\\
+\textit{\HSBCJobTitle} \hfill \textit{\HSBCJobStart\,--\,\HSBCJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \HSBCTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \HSBCShort
 \end{itemize}
 
-\item \parbox{\textwidth}{\textbf{\LloydsName} \hfill \textit{\LloydsLocation}}\\[2pt]
-\textit{\LloydsJobTitle} \hfill \textit{\LloydsJobStart\,--\,\LloydsJobEnd}\\[1pt]
-\begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \parbox{\textwidth}{\textbf{\LloydsName} \hfill \textit{\LloydsLocation}}\\
+\textit{\LloydsJobTitle} \hfill \textit{\LloydsJobStart\,--\,\LloydsJobEnd}
+
+\vspace{0.2cm}
+{\color{secondary}Technologies:} \LloydsTechnology
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
     \item \LloydsProjects
-    \item \LloydsDeadlines
     \item \LloydsFiscal
 \end{itemize}
 
+\begin{samepage}
+\needspace{13\baselineskip}
 \section{Education}
 \begin{itemize}[leftmargin=0pt,label={},itemsep=2em]
-\item \parbox{\textwidth}{\textbf{Universiteit van Amsterdam} \hfill \textit{Amsterdam, The Netherlands}}\\
-\textit{Masters Software Engineering} \hfill \textit{Graduated 2022}\\
-\textit{(Completed while maintaining full-time employment)}
-
-\item \textbf{Wolverhampton University and Hogeschool Holland}\\
-\textit{BA Hons (2:1) and HEAO in European Business Administration} \hfill \textit{Graduated 1996}
+\item \parbox{\textwidth}{\textbf{\MasterUniversity} \hfill \textit{\MasterLocation}}\\
+\textit{\MasterCourse} \hfill \textit{Graduated \MasterGraduation}\\[4pt]
+\begin{itemize}[label={--},leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item {\color{secondary}Thesis:} \textit{\MastersThesisTitle}\\
+    \MastersThesisDescription
+    \item {\color{secondary}Courses:} \MastersCourseList
+    \item {\color{secondary}Pre-Masters:} \PreMastersCourseList
+    \item {\color{secondary}Languages Used:} \MastersLanguages
 \end{itemize}
+{Note: \textit{\MastersNotableAchievement}}
+
+\item \parbox{\textwidth}{\textbf{\BatchelorsUniversity} \hfill \textit{\BatchelorsLocation}}\\
+\textit{\BatchelorsCourse} \hfill \textit{Graduated \BatchelorsGraduation}
+\parbox{\textwidth}{\textbf{\HEAOHogeschool} \hfill \textit{\HEAOsLocation}}\\
+\textit{\HEAOCourse} \hfill \textit{Graduated \BatchelorsGraduation}
+\end{itemize}
+\end{samepage}
+
 
 \section{Certifications}
 \begin{itemize}[leftmargin=*]
@@ -189,7 +227,7 @@
 \begin{itemize}[leftmargin=*]
 \item \textbf{English:} \LangEnglish
 \item \textbf{Dutch:} \LangDutch
-\end{itemize}
+\end{itemize} 
 
 \end{itemize}
 
