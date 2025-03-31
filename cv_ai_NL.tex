@@ -1,0 +1,241 @@
+% Professional CV Template
+\documentclass[11pt,a4paper]{article}
+
+% Required packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[dutch]{datetime2}
+\usepackage{ragged2e}
+\usepackage{needspace}
+
+
+% Custom colors
+\definecolor{primary}{RGB}{70,130,180}
+\definecolor{secondary}{RGB}{128,128,128}
+
+% Page geometry
+\geometry{
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
+% Custom section style
+\titleformat{\section}
+    {\Large\bfseries\color{primary}}
+    {}{0em}
+    {}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+% Add custom spacing for company entries
+\setlength{\parindent}{0pt}
+\newcommand{\company}[2]{\noindent\textbf{#1} \hfill \textit{#2}\\}
+
+% Custom commands for contact info
+\newcommand{\contactItem}[2]{
+    {\color{secondary}\small#1} & #2 \\
+}
+
+% After the packages section, add this new command
+\newenvironment{companylist}{%
+    \begin{itemize}[leftmargin=0pt,label={}]
+}{%
+    \end{itemize}
+}
+
+% After the packages section, add these commands
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000  % Reduce hyphenation
+\exhyphenpenalty=10000  % Reduce hyphenation
+\widowpenalty=10000  % Prevent widow lines
+\clubpenalty=10000   % Prevent club lines
+
+% After the packages section, add:
+\input{cv_texts.tex}
+
+% Add this command definition before \begin{document}
+\newcommand{\companyheader}[2]{%
+  \noindent\begin{minipage}{\textwidth}%
+    \textbf{#1}\hfill\textit{#2}%
+  \end{minipage}\\[2pt]%
+}
+
+% Document begins
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\textbf{\MakeUppercase{\ProfileName}}}\\[0.5em]
+    {\color{secondary}\large \CVSubtitleAINL}\\[1em]
+\end{center}
+
+% Contact Information
+\begin{tabular}{ll@{\hspace{0.2\textwidth}}ll}
+    \faPhone & \ProfilePhone & \faLinkedin & \href{https://www.\ProfileLinkedIn}{\texttt{\ProfileLinkedIn}} \\
+    \faEnvelope & \href{mailto:\ProfileEmail}{\texttt{\ProfileEmail}} & \faGlobe & \href{https://\ProfileWebsite}{\texttt{\ProfileWebsite}} \\
+    \faMapMarker & \ProfileLocationNL & \faGithub & \href{https://\ProfileGithub}{\texttt{\ProfileGithub}} \\
+    \faFlag & \ProfileCitizenshipNL & & \\
+\end{tabular}
+
+\section{Samenvatting}
+\ProfileAINL
+
+
+\vspace{0.5cm}
+\section{Werkervaring}
+\needspace{8\baselineskip}
+\begin{itemize}[leftmargin=0pt,label={},itemsep=2em,topsep=0pt]
+\item \parbox{\textwidth}{\textbf{\KhonraadNameNL} \hfill \textit{\KhonraadLocationNL}}\\
+\textit{\KhonraadThirdJobTitleNL} \hfill \textit{\KhonraadFirstJobStartNL\,--\,\KhonraadThirdJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \KhonraadTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \KhonraadInnovationNL
+    \begin{itemize}[leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt,itemsep=0pt,label={--}]
+        \item \KhonraadChatbotsNL
+        \item \KhonraadMobileNL
+        \item \KhonraadAndroidNL
+        \item \KhonraadMPSNL
+    \end{itemize}
+\end{itemize} 
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\McfunshineNameNL} \hfill \textit{\McfunshineLocationNL}}\\
+\textit{\McfunshineJobTitleNL} \hfill \textit{\McfunshineJobStartNL\,--\,\McfunshineJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \McfunshinePodmorphTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \McfunshinePodmorphNL
+    \item \McfunshinePodmorphAINL
+\end{itemize}
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\BakerNameNL} \hfill \textit{\BakerLocationNL}}\\
+\textit{\BakerFirstJobTitleNL} \hfill \textit{\BakerFirstJobStartNL\,--\,\BakerSecondJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \BakerTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \BakerShortNL
+\end{itemize}
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\KempenNameNL} \hfill \textit{\KempenLocationNL}}\\
+\textit{\KempenSecondJobTitleNL} \hfill \textit{\KempenFirstJobStartNL\,--\,\KempenSecondJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \KempenTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \KempenShortNL
+\end{itemize}
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\UnisysNameNL} \hfill \textit{\UnisysLocationNL}}\\
+\textit{\UnisysJobTitleNL} \hfill \textit{\UnisysJobStartNL\,--\,\UnisysJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \UnisysTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \UnisysShortNL
+\end{itemize}
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\ACTNameNL} \hfill \textit{\ACTLocationNL}}\\
+\textit{\ACTJobTitleNL} \hfill \textit{\ACTJobStartNL\,--\,\ACTJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \ACTTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \ACTShortNL
+\end{itemize}
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\HSBCNameNL} \hfill \textit{\HSBCLocationNL}}\\
+\textit{\HSBCJobTitleNL} \hfill \textit{\HSBCJobStartNL\,--\,\HSBCJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \HSBCTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \HSBCShortNL
+\end{itemize}
+
+
+\needspace{8\baselineskip}
+\item \parbox{\textwidth}{\textbf{\LloydsNameNL} \hfill \textit{\LloydsLocationNL}}\\
+\textit{\LloydsJobTitleNL} \hfill \textit{\LloydsJobStartNL\,--\,\LloydsJobEndNL}
+
+\vspace{0.2cm}
+{\color{secondary}Technologieën:} \LloydsTechnologyNL
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+    \item \LloydsShortNL
+\end{itemize}
+
+
+
+\vspace{0.5cm}
+\needspace{12\baselineskip}
+\section{Opleiding}
+\begin{itemize}[leftmargin=0pt,label={},itemsep=2em]
+\item \parbox{\textwidth}{\textbf{\MasterUniversityNL} \hfill \textit{\MasterLocationNL}}\\
+\textit{\MasterCourseNL} \hfill \textit{Afgestudeerd \MasterGraduationNL}\\[4pt]
+
+\begin{itemize}[label={--},leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item {\color{secondary}Scriptie:} \textit{\MastersThesisTitleNL}\\
+    \MastersThesisDescriptionNL
+    \item {\color{secondary}Relevante Module:} \textit{\MastersNotableJavaModuleNL}\\
+\end{itemize}
+
+{\color{secondary}Opmerking:} \textit{\MastersNotableAchievementNL}
+
+
+\item \parbox{\textwidth}{\textbf{\BatchelorsUniversityNL} \hfill \textit{\BatchelorsLocationNL}}\\
+\textit{\BatchelorsCourseNL} \hfill \textit{Afgestudeerd \BatchelorsGraduationNL}
+\parbox{\textwidth}{\textbf{\HEAOHogeschoolNL} \hfill \textit{\HEAOsLocationNL}}\\
+\textit{\HEAOCourseNL} \hfill \textit{Afgestudeerd \BatchelorsGraduationNL}
+\end{itemize}
+
+
+
+\vspace{0.5cm}
+\needspace{20\baselineskip}
+\section{Certificeringen}
+\begin{itemize}[leftmargin=*,topsep=-6pt,parsep=0pt,partopsep=0pt,itemsep=0pt]
+\item \CertMicrosoftNL
+\item \CertDutch
+\end{itemize}
+
+
+\vspace{0.5cm}
+\needspace{8\baselineskip}
+\section{Talen}
+\begin{itemize}[leftmargin=*]
+\item \textbf{Engels:} \LangEnglishNL
+\item \textbf{Nederlands:} \LangDutchNL
+\end{itemize} 
+
+\end{itemize}
+
+\end{document} 
